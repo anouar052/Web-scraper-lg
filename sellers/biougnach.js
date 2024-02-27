@@ -1,4 +1,5 @@
-const biougnach = async (page, brand, timer, autoScroll, scroll) => {
+import autoScroll from "../utils/autoScroll.js";
+const biougnach = async (page, brand, timer, scroll) => {
   const url = "https://www.biougnach.ma/shop/search/VFY%3D";
   console.log(`
 ---------------------------------------
