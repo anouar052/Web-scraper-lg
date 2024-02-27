@@ -42,19 +42,14 @@ Biougnach started
       )
         ? product.querySelector("span.product-card__new-price")?.textContent
         : product.querySelector(".product-card__prices")?.textContent;
-      const current_price = parseFloat(
-        current_price_str.replace(/DH|\\s/g, ""),
-      );
+      const current_price = +current_price_str
+        .replace(/DH|\s|\.(?=\d{3})/g, "")
+        .replace(",", ".");
       const ref = product
         .querySelector("ul.product-card__features-list >li:first-child")
-        .textContent.replace(" Référence: ", "");
-      if (product.querySelector(".product-card__badge")) {
-        const status = product.querySelector(
-          ".product-card__badge",
-        ).textContent;
-        return { name, ref, current_price, status };
-      }
-      return { name, ref, current_price };
+        ?.textContent.replace(" Référence: ", "");
+      const status = product.querySelector(".product-card__badge")?.textContent;
+      return { name, ref, status, current_price };
     }),
   );
   return products_list;

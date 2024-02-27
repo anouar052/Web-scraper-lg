@@ -3,6 +3,7 @@ import promptSync from "prompt-sync";
 import fs from "fs";
 import biougnach from "./sellers/biougnach.js";
 import convert2csv from "./utils/convert2csv.js";
+import electroplanet from "./sellers/electroplanet.js";
 
 const prompt = promptSync();
 const timer = (ms) => new Promise((res) => setTimeout(res, ms));
@@ -32,7 +33,17 @@ async function main() {
   });
   page.setDefaultNavigationTimeout(2 * 60 * 1000);
 
-  const products_list = await biougnach(page, brand, timer, scroll);
+  const products_list_biougnach = await biougnach(page, brand, timer, scroll);
+  const products_list_electroplanet = await electroplanet(
+    page,
+    brand,
+    timer,
+    scroll,
+  );
+
+  const products_list = products_list_electroplanet.concat(
+    products_list_biougnach,
+  );
 
   console.log(products_list);
 
