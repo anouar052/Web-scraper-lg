@@ -4,6 +4,7 @@ import fs from "fs";
 import biougnach from "./sellers/biougnach.js";
 import convert2csv from "./utils/convert2csv.js";
 import electroplanet from "./sellers/electroplanet.js";
+import scrapeBousfiha from "./sellers/bousfiha.js";
 
 const prompt = promptSync();
 const timer = (ms) => new Promise((res) => setTimeout(res, ms));
@@ -41,8 +42,16 @@ async function main() {
     scroll,
   );
 
+  const products_list_bousfiha = await scrapeBousfiha(
+    page,
+    brand,
+    timer,
+    scroll,
+  );
+
   const products_list = products_list_electroplanet.concat(
     products_list_biougnach,
+    products_list_bousfiha,
   );
 
   console.log(products_list);
@@ -53,7 +62,7 @@ async function main() {
     console.log("file saved!");
   });
 
-  await browser.close();
+  await browser?.close();
 }
 
 main();

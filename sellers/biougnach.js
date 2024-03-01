@@ -1,6 +1,6 @@
 import autoScroll from "../utils/autoScroll.js";
 const biougnach = async (page, brand, timer, scroll) => {
-  const url = "https://www.biougnach.ma/shop/search/VFY%3D";
+  const url = "https://www.biougnach.ma/shop/category/21/3";
   console.log(`
 ---------------------------------------
 Biougnach started
@@ -34,6 +34,7 @@ Biougnach started
 
   const products_list = await page.$$eval(".product-card", (products) =>
     products.map((product) => {
+      const retailer = "Biougnach";
       const name = product.querySelector(
         ".product-card__name > a",
       )?.textContent;
@@ -49,7 +50,7 @@ Biougnach started
         .querySelector("ul.product-card__features-list >li:first-child")
         ?.textContent.replace(" Référence: ", "");
       const status = product.querySelector(".product-card__badge")?.textContent;
-      return { name, ref, status, current_price };
+      return { name, ref, status, current_price, retailer };
     }),
   );
   return products_list;

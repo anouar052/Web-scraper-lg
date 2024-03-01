@@ -1,33 +1,116 @@
-"name","ref","status","discount","current_price"
-"LG 65UR78006 ","65UR78006","Promo","-2% ",7199
-"LG 65CS3VA ","65CS3VA","Promo","-11% ",19999
-"LG 55CS3VA ","55CS3VA","Promo","-10% ",12999
-"LG LED 65UR80006LJ 4K ","LED 65UR80006LJ 4K","Promo","-7% ",8499
-"LG LED 55UR80006LJ ","LED 55UR80006LJ","Promo","-3% ",6549
-"LG LED 70UR80006LJ 4K ","LED 70UR80006LJ 4K","Promo","-7% ",10199
-"LG LED 50UR80006LJ 4K ","LED 50UR80006LJ 4K","Promo","-11% ",5199
-"LG LED 50NANO776RA 4K ","LED 50NANO776RA 4K","Promo","-11% ",5399
-"LG LED 43UR80006LJ 4K ","LED 43UR80006LJ 4K","Promo","-10% ",4299
-"LG LED 43UQ75006 4K ","LED 43UQ75006 4K",,,3999
-"LG LED 50UQ75006 4K ","LED 50UQ75006 4K","Promo","-4% ",4499
-"LG LED 55UQ75006 4K ","LED 55UQ75006 4K","Promo","-1% ",5199
-"LG LED 65UP7760PVB 4K ","LED 65UP7760PVB 4K",,,7499
-"LG LED 75UR80006LJ ","LED 75UR80006LJ","Promo","-15% ",10999
-"LG OLED POSE 55LX1Q6LA ","OLED POSE 55LX1Q6LA",,,23199
-"LG 32LQ630B6LB HD ","32LQ630B6LB HD",,,2199
-"LG LED 55NANO776RA 4K ","LED 55NANO776RA 4K","Promo","-11% ",6699
-"LG LED 86UR80006LA 4K ","LED 86UR80006LA 4K","Promo","-5% ",18999
-"LG OLED 65A26LA 4K ","OLED 65A26LA 4K",,,13999
-"LG OLED 55A26LA 4K ","OLED 55A26LA 4K",,,9299
-" TV LG LED SMART 32"" ","32LQ630B6LB",,,2599
-" TV LG UHD SMART 43"" ","43UQ75006",,,3999
-" TV LG  LED UHD SMART 43"" ","43UQ80006LD","Liquidation",,4299
-" TV LG UHD SMART 50"" ","50UQ75006",,,4699
-" TV LG LED UHD SMART 50"" ","50UR80006LJ","Promotion",,5099
-" TV LG LED UHD SMART 55"" ","55UR80006LJ",,,6699
-" TV LG LED NANOCELL UHD SMART 55"" ","55NANO776RA","Promotion",,6699
-" TV LG LED UHD SMART 70"" ","70UR80006LJ","Promotion",,9999
-" TV LG QNED UHD SMART 65"" ","65QNED816RA","Promotion",,10999
-" TV LG LED UHD SMART 75"" ","75UR80006LJ","Promotion",,11499
-" TV LG OLED UHD SMART 55"" ","OLED55CS3VA","Promotion",,13499
-" TV LG LED SMART  43"" ","43LM6300PVB","En rupture du stock",,3789
+"name","ref","status","discount","current_price","retailer","title","currentPrice"
+"LG 65CS3VA ","65CS3VA","Promo","-11% ",19999,"Electroplanet",,
+"LG 55CS3VA ","55CS3VA","Promo","-10% ",12999,"Electroplanet",,
+"LG LED 55NANO776RA 4K ","LED 55NANO776RA 4K","Promo","-11% ",6699,"Electroplanet",,
+"LG LED 86UR80006LA 4K ","LED 86UR80006LA 4K","Promo","-5% ",18999,"Electroplanet",,
+"LG LED 65UR80006LJ 4K ","LED 65UR80006LJ 4K","Promo","-7% ",8499,"Electroplanet",,
+"LG LED 55UR80006LJ ","LED 55UR80006LJ","Promo","-3% ",6549,"Electroplanet",,
+"LG LED 70UR80006LJ 4K ","LED 70UR80006LJ 4K","Promo","-7% ",10199,"Electroplanet",,
+"LG LED 50UR80006LJ 4K ","LED 50UR80006LJ 4K","Promo","-11% ",5199,"Electroplanet",,
+"LG LED 50NANO776RA 4K ","LED 50NANO776RA 4K","Promo","-11% ",5399,"Electroplanet",,
+"LG LED 43UR80006LJ 4K ","LED 43UR80006LJ 4K","Promo","-10% ",4299,"Electroplanet",,
+"LG LED 43UQ75006 4K ","LED 43UQ75006 4K",,,3999,"Electroplanet",,
+"LG LED 50UQ75006 4K ","LED 50UQ75006 4K","Promo","-4% ",4499,"Electroplanet",,
+"LG LED 55UQ75006 4K ","LED 55UQ75006 4K","Promo","-1% ",5199,"Electroplanet",,
+"LG LED 65UP7760PVB 4K ","LED 65UP7760PVB 4K",,,7499,"Electroplanet",,
+"LG LED 75UR80006LJ ","LED 75UR80006LJ","Promo","-15% ",10999,"Electroplanet",,
+"LG OLED POSE 55LX1Q6LA ","OLED POSE 55LX1Q6LA",,,23199,"Electroplanet",,
+"LG 32LQ630B6LB HD ","32LQ630B6LB HD",,,2199,"Electroplanet",,
+"LG OLED 65A26LA 4K ","OLED 65A26LA 4K",,,13999,"Electroplanet",,
+"LG OLED 55A26LA 4K ","OLED 55A26LA 4K",,,9299,"Electroplanet",,
+"LG 65UR78006 ","65UR78006","Promo","-2% ",7199,"Electroplanet",,
+" TV LG LED SMART 32"" ","32LQ630B6LB",,,2599,"Biougnach",,
+" TV LG UHD SMART 43"" ","43UQ75006",,,3999,"Biougnach",,
+" TV LG  LED UHD SMART 43"" ","43UQ80006LD","Liquidation",,4299,"Biougnach",,
+" TV LG UHD SMART 50"" ","50UQ75006",,,4699,"Biougnach",,
+" TV LG LED UHD SMART 43"" ","43UR80006LJ",,,4799,"Biougnach",,
+" TV LG LED UHD SMART 50"" ","50UR80006LJ","Promotion",,5099,"Biougnach",,
+" TV LG LED UHD SMART 55"" ","55UR80006LJ",,,6699,"Biougnach",,
+" TV LG LED NANOCELL UHD SMART 55"" ","55NANO776RA","Promotion",,6699,"Biougnach",,
+" TV LG LED UHD SMART 70"" ","70UR80006LJ","Promotion",,9999,"Biougnach",,
+" TV LG QNED UHD SMART 65"" ","65QNED816RA","Promotion",,11499,"Biougnach",,
+" TV LG LED UHD SMART 75"" ","75UR80006LJ","Promotion",,11499,"Biougnach",,
+" TV LG OLED UHD SMART 55"" ","OLED55CS3VA","Promotion",,13499,"Biougnach",,
+" TV LG OLED UHD SMART 65"" ","OLED65CS3VA","Promotion",,21499,"Biougnach",,
+" TV LG LED SMART  43"" ","43LM6300PVB","En rupture du stock",,3789,"Biougnach",,
+" TV LG LED UHD SMART 49"" ","49UN7240PVG","En rupture du stock",,5099,"Biougnach",,
+" TV LG LED UHD SMART 50"" ","50UN7240PVG","En rupture du stock",,5199,"Biougnach",,
+" TV LG UHD SMART 55"" ","55UQ75006","En rupture du stock",,5299,"Biougnach",,
+" TV LG LED NANO UHD SMART 50"" ","50NANO776RA","En rupture du stock",,5399,"Biougnach",,
+" TV LG LED UHD SMART  55"" ","55UM7090PVC","En rupture du stock",,5599,"Biougnach",,
+" TV LED FHD SMART LG 49"" ","49LK5900PLA","En rupture du stock",,5699,"Biougnach",,
+" TV LG LED UHD SMART 55"" ","55UN7240PVG","En rupture du stock",,5719,"Biougnach",,
+" TV LG LED UHD SMART 50"" ","50UN8000PVB","En rupture du stock",,5999,"Biougnach",,
+" TV LG LED UHD SMART 55"" ","55UN7340PVC","En rupture du stock",,7099,"Biougnach",,
+" TV LG LED UHD 4K NANOCELL SMART 49"" ","49NANO80VNA","En rupture du stock",,7349,"Biougnach",,
+" TV LG LED UHD SMART 55"" ","55UQ80006LD","En rupture du stock",,7590,"Biougnach",,
+" TV LG LED UHD SMART  60"" ","60UM7100PVB","En rupture du stock",,7899,"Biougnach",,
+" TV LG LED UHD SMART 60"" ","60UN7100PVA","En rupture du stock",,7899,"Biougnach",,
+" TV LG LED UHD SMART 55"" ","55UN8060PVB","En rupture du stock",,8399,"Biougnach",,
+" TV LG UHD SMART 65"" ","65UR80006LJ","En rupture du stock",,8999,"Biougnach",,
+" TV LG LED UHD SMSART  65"" ","65UM7340PVA","En rupture du stock",,9199,"Biougnach",,
+" TV LG LED UHD SMART 65"" ","65UN7240PVG","En rupture du stock",,9669,"Biougnach",,
+" TV LG LED UHD SMART 55"" ","55NANO80VNA","En rupture du stock",,9969,"Biougnach",,
+" TV LG QNED UHD SMART 55"" ","55QNED816RA","En rupture du stock",,9999,"Biougnach",,
+" TV LG LED NANOCELL UHD SMART 65"" ","65NANO776RA","En rupture du stock",,10299,"Biougnach",,
+" TV LG LED UHD SMART 65"" ","65UQ80006LD","En rupture du stock",,10399,"Biougnach",,
+" TV LG LED UHD SMART 65"" ","65UN7340PVC","En rupture du stock",,11690,"Biougnach",,
+" TV LG LED UHD NANOCELL SMART 55"" ","55NANO86VNA","En rupture du stock",,11790,"Biougnach",,
+" TV LG OLED UHD SMART 55"" ","OLED55A26LA","En rupture du stock",,11999,"Biougnach",,
+" TV LG QNED UHD SMART 65"" SERIE 9 ","65QNED916QA","En rupture du stock",,12499,"Biougnach",,
+" TV LG QNED 8K SMART 65"" ","65QNED956QA","En rupture du stock",,12499,"Biougnach",,
+" TV LG LED UHD SMART 70"" ","70UN7380PVC","En rupture du stock",,12799,"Biougnach",,
+" TV LG LED UHD SMART 70"" ","70UM7380PVA","En rupture du stock",,13490,"Biougnach",,
+" TV LG LED SUHD SMART 65"" ","65NANO80VNA","En rupture du stock",,13499,"Biougnach",,
+" TV LG LED NANO UHD SMART 75"" ","75NANO776RA","En rupture du stock",,14999,"Biougnach",,
+" TV LG LED SUHD SMART  65"" ","65SM8100PVA","En rupture du stock",,16290,"Biougnach",,
+" TV LG LED S-UHD SMART 75"" ","75NANO79VNE","En rupture du stock",,16499,"Biougnach",,
+" TV LG LED UHD SMART 75"" ","75UM7580PVA","En rupture du stock",,18490,"Biougnach",,
+" TV LG LED UHD SMART 75""  ","75UQ90006LC","En rupture du stock",,19199,"Biougnach",,
+" TV LG LED SUHD SMART 65"" ","65NANO86VNA","En rupture du stock",,19490,"Biougnach",,
+" TV LG OLED UHD SMART 55"" ","OLED55CXPVA","En rupture du stock",,19490,"Biougnach",,
+" TV LG LED UHD SMART 86"" ","86NANO776RA","En rupture du stock",,21999,"Biougnach",,
+" TV LG QNED UHD SMART 75"" ","75QNED916QA","En rupture du stock",,22999,"Biougnach",,
+" TV LG OLED UHD SMART 65"" ","OLED65A26LA","En rupture du stock",,23469,"Biougnach",,
+" TV LG OLED UHD SMART  65"" ","OLED65C9PVA","En rupture du stock",,32590,"Biougnach",,
+" TV LG LED UHD SMARET  82"" ","82UM7580PVA","En rupture du stock",,32990,"Biougnach",,
+" TV LG OLED SMART UHD 65"" ","OLED65GXPVA","En rupture du stock",,32990,"Biougnach",,
+" TV LG LED SUHD SMART 75"" ","75NANO90VNA","En rupture du stock",,32990,"Biougnach",,
+" TV LG OLED UHD SMART 77"" ","OLED77C36LA","En rupture du stock",,37999,"Biougnach",,
+" TV LG OLED UHD SMART  77"" ","OLED77C9PVB","En rupture du stock",,97490,"Biougnach",,
+,"43UQ75006LG",,,,"bousfiha","Smart TV LG UHD UQ75 I 43 pouces I 4k Processeur IA α5 Gen5 I ThinQ AI","4 199,00 Dh  TTC"
+,"50UR80006LJ",,,,"bousfiha","Smart TV LG UHD UR80 I 50 pouces I 4k Processeur IA α7 Gen6 I ThinQ AI","4 990,00 Dh  TTC"
+,"65NANO776RA",,,,"bousfiha","Smart TV LG Nanocell 77 I 65 pouces I 4k Processeur IA α7 Gen6 I ThinQ AI","9 899,00 Dh  TTC"
+,"70UR80006LJ",,,,"bousfiha","Smart TV LG UHD UR80 I 70 pouces I 4k Processeur IA α7 Gen6 I ThinQ AI","9 999,00 Dh  TTC"
+,"75UR80006LA",,,,"bousfiha","Smart TV LG UHD UR80 I 75 pouces I 4k Processeur IA α7 Gen6 I ThinQ AI","11 299,00 Dh  TTC"
+,"OLED55CS3VA",,,,"bousfiha","Smart TV LG OLED CS3 I 55 pouces I 4K Processeur IA α9 Gen6 I ThinQ AI","12 999,00 Dh  TTC"
+,"75NANO776RA",,,,"bousfiha","Smart TV LG Nanocell 77 I 75 pouces I 4k Processeur IA α7 Gen6 I ThinQ AI","13 990,00 Dh  TTC"
+,"OLED65G36LA",,,,"bousfiha","Smart TV LG OLED G3 I 65 pouces I 4K Processeur IA α9 Gen6 I ThinQ AI","32 799,00 Dh  TTC"
+,"43UP7550PVG",,,,"bousfiha","TV LG LED 43P UHD 4K SMART AVEC WEBOS","3 990,00 Dh  TTC"
+,"43UQ80006LD",,,,"bousfiha","TV LG LED 43P SMART UHD","4 499,00 Dh  TTC"
+,"55UQ75006LG",,,,"bousfiha","Smart TV LG UHD UQ75 I 55 pouces I 4k Processeur IA α5 Gen5 I ThinQ AI","4 699,00 Dh  TTC"
+,"50UR762H",,,,"bousfiha","TV LG LED 50P SMART MODE HOTEL","4 999,00 Dh  TTC"
+,"50NANO776RA",,,,"bousfiha","Smart TV LG Nanocell 77 I 50 pouces I 4k Processeur IA α7 Gen6 I ThinQ AI","5 399,00 Dh  TTC"
+,"50UQ91006LC",,,,"bousfiha","TV LG LED 50P SMART UHD 4K","5 899,00 Dh  TTC"
+,"55UR762H",,,,"bousfiha","TV LG LED 55P SMART MODE HOTEL","5 999,00 Dh  TTC"
+,"55UQ80006LD",,,,"bousfiha","TV LG LED 55P SMART UHD 4K","5 999,00 Dh  TTC"
+,"55NANO796QA",,,,"bousfiha","TV LG LED 55P UHD 4K SMART NANOCELL","6 099,00 Dh  TTC"
+,"55NANO776RA",,,,"bousfiha","Smart TV LG Nanocell 77 I 55 pouces I 4k Processeur IA α7 Gen6 I ThinQ AI","6 699,00 Dh  TTC"
+,"55UR80006LJ",,,,"bousfiha","Smart TV LG UHD UR80 I 55 pouces I 4k Processeur IA α7 Gen6 I ThinQ AI","6 699,00 Dh  TTC"
+,"65UP7760PVB",,,,"bousfiha","TV LG LED 65P UHD 4K SMART AVEC WEBOS","7 690,00 Dh  TTC"
+,"65UR80006LJ",,,,"bousfiha","Smart TV LG UHD UR80 I 65 pouces I 4k Processeur IA α7 Gen6 I ThinQ AI","8 099,00 Dh  TTC"
+,"70UQ80006LD",,,,"bousfiha","TV LG  70P SMART 4K ULTRA HD","8 490,00 Dh  TTC"
+,"65NANO796QA",,,,"bousfiha","TV LG LED 65P UHD 4K SMART NANOCELL","8 499,00 Dh  TTC"
+,"65UQ80006LD",,,,"bousfiha","TV LG 65P SMART 4K ULTRA HD","8 799,00 Dh  TTC"
+,"55QNED816RA",,,,"bousfiha","Smart TV LG QNED 81 I 55 pouces I 4k Processeur IA α7 Gen6 I ThinQ AI","9 690,00 Dh  TTC"
+,"OLED48A26LA",,,,"bousfiha","TV LG OLED 48P SMART 4K","11 699,00 Dh  TTC"
+,"OLED55CS6LA",,,,"bousfiha","TV LG OLED 55P SMART 4K CS","10 199,00 Dh  TTC"
+,"65QNED816RA",,,,"bousfiha","Smart TV LG QNED 81 I 65 pouces I 4k Processeur IA α7 Gen6 I ThinQ AI","10 999,00 Dh  TTC"
+,"75NANO79VNE",,,,"bousfiha","SMART TV LED NANOCELL 75P UHD 4K","14 990,00 Dh  TTC"
+,"OLED65A26LA",,,,"bousfiha","TV LG OLED 65P SMART 4K ULTRA HD","13 299,00 Dh  TTC"
+,"OLED65CS6LA",,,,"bousfiha","TV LG OLED 65P SMART 4K","17 490,00 Dh  TTC"
+,"86UR80006LA",,,,"bousfiha","Smart TV LG UHD UR80 I 86 pouces I 4k Processeur IA α7 Gen6 I ThinQ AI","18 490,00 Dh  TTC"
+,"75QNED806QA",,,,"bousfiha","TV LG QNED MINILED 75P UHD 4K","19 990,00 Dh  TTC"
+,"55LX1Q6LA",,,,"bousfiha","TV LG OLED 55P SMART POSÉ  ULTRA HD","22 199,00 Dh  TTC"
+,"75QNED95VPA",,,,"bousfiha","TV LG QNED 75P SMART NANOCELL 4K","35 990,00 Dh  TTC"
+,"OLED77C36LA",,,,"bousfiha","Smart TV LG OLED C3 I 77 pouces I 4K Processeur IA α9 Gen6 I ThinQ AI","34 690,00 Dh  TTC"

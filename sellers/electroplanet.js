@@ -26,6 +26,7 @@ Electroplanet started
 
   const products_list = await page.$$eval("li.product-item", (products) =>
     products.map((product) => {
+      const retailer = "Electroplanet";
       const name = product
         .querySelector(".product-item-name > a")
         ?.textContent.replace(/\n/g, "");
@@ -39,7 +40,7 @@ Electroplanet started
       const discount = product
         .querySelector(".price-discount-percent")
         ?.textContent.replace(/\n/g, "");
-      return { name, ref, status, discount, current_price };
+      return { name, ref, status, discount, current_price, retailer };
     }),
   );
 
