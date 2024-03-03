@@ -1,7 +1,7 @@
 import autoScroll from "../utils/autoScroll.js";
 const electroplanet = async (page, brand, timer, scroll) => {
   let manufacturerId;
-  switch (brand.toUpperCase()) {
+  switch (brand) {
     case "LG":
       manufacturerId = "70";
       break;
@@ -24,7 +24,7 @@ Electroplanet started
 
   await timer(2001);
 
-  const products_list = await page.$$eval("li.product-item", (products) =>
+  const products_list_temp = await page.$$eval("li.product-item", (products) =>
     products.map((product) => {
       const retailer = "Electroplanet";
       const name = product
@@ -40,9 +40,14 @@ Electroplanet started
       const discount = product
         .querySelector(".price-discount-percent")
         ?.textContent.replace(/\n/g, "");
+
       return { name, ref, status, discount, current_price, retailer };
     }),
   );
+  const products_list = products_list_temp.map((product) => ({
+    brand,
+    ...product,
+  }));
 
   return products_list;
 };

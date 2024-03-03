@@ -12,7 +12,9 @@
   "license": "ISC",
   "dependencies": {
     "@json2csv/plainjs": "^7.0.6",
+    "node-json-xlsx": "^0.2.2",
     "prompt-sync": "^4.2.0",
-    "puppeteer": "^22.3.0"
+    "puppeteer": "^22.3.0",
+    "xlsx": "^0.18.5"
   }
 }

@@ -21,9 +21,8 @@ Biougnach started
     inputs.push({ input, label });
   }
 
-  const lg_filter = inputs.filter((input) =>
-    input.label.includes(brand.toUpperCase()),
-  )[0].input;
+  const lg_filter = inputs.filter((input) => input.label.includes(brand))[0]
+    .input;
   await lg_filter.$eval("input", (check) => check.click());
 
   await timer(1000);
@@ -49,8 +48,11 @@ Biougnach started
       const ref = product
         .querySelector("ul.product-card__features-list >li:first-child")
         ?.textContent.replace(" Référence: ", "");
+      const brand = product
+        .querySelector("ul.product-card__features-list >li:nth-child(2)")
+        ?.textContent.replace(" Marque: ", "");
       const status = product.querySelector(".product-card__badge")?.textContent;
-      return { name, ref, status, current_price, retailer };
+      return { brand, name, ref, status, current_price, retailer };
     }),
   );
   return products_list;

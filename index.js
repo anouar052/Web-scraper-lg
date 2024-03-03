@@ -1,6 +1,7 @@
 import puppeteer from "puppeteer";
 import promptSync from "prompt-sync";
 import fs from "fs";
+import XLSX from "xlsx";
 import biougnach from "./sellers/biougnach.js";
 import convert2csv from "./utils/convert2csv.js";
 import electroplanet from "./sellers/electroplanet.js";
@@ -11,7 +12,7 @@ const timer = (ms) => new Promise((res) => setTimeout(res, ms));
 
 async function main() {
   //Setup
-  const brand = prompt("what brand?:");
+  const brand = prompt("what brand?: ").toUpperCase();
   let scroll = +prompt(
     "enter scroll number (1-100 or leave blank to get all items): ",
   );
@@ -53,14 +54,22 @@ async function main() {
     products_list_biougnach,
     products_list_bousfiha,
   );
-
   console.log(products_list);
 
-  const csv = convert2csv(products_list);
-  fs.writeFileSync("./products.csv", csv, (err) => {
-    if (err) throw err;
-    console.log("file saved!");
-  });
+  // const csv = convert2csv(products_list);
+  const sheet = XLSX.utils.json_to_sheet(products_list);
+  const excel = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(excel, sheet, "Sheet1");
+  XLSX.writeFile(excel, `${brand}_products.xlsx`);
+  // fs.writeFileSync(
+  //   `./${brand}_products.xlsx`,
+  //   excel,
+  //   (err) => {
+  //     if (err) throw err;
+  //     console.log("file saved!");
+  //   },
+  //   "binary",
+  // );
 
   await browser?.close();
 }

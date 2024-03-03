@@ -1,11 +1,9 @@
-import autoScroll from "../utils/autoScroll.js";
-
-const fetchProducts = async (page, products_list) => {
+const fetchProducts = async (page, products_list, brand) => {
   const products_scrape = await page.$$eval("h5.product-title > a", (links) =>
     links.map((link) => link.href),
   );
 
-  const protoProducts = products_scrape.slice(0, 2);
+  const protoProducts = products_scrape.slice(0, 3);
   for (const product of protoProducts) {
     try {
       const retailer = "bousfiha";
@@ -26,7 +24,7 @@ const fetchProducts = async (page, products_list) => {
             .replace(/[^\d,]/g, "")
             .replace(",", "."),
       );
-      products_list.push({ name, ref, status, current_price, retailer });
+      products_list.push({ brand, name, ref, status, current_price, retailer });
     } catch (error) {
       console.error("Error fetching product reference:", error);
     } finally {
@@ -35,9 +33,9 @@ const fetchProducts = async (page, products_list) => {
   }
 };
 
-const scrapeBousfiha = async (page, brand, timer, scroll) => {
+const scrapeBousfiha = async (page, brand, timer) => {
   let url;
-  switch (brand.toUpperCase()) {
+  switch (brand) {
     case "LG":
       url = "https://electrobousfiha.com/188-televiseur?q=Marque-LG";
       break;
@@ -60,7 +58,7 @@ const scrapeBousfiha = async (page, brand, timer, scroll) => {
     const products_list = [];
 
     for (let i = 0; i < pageNumber; i++) {
-      await fetchProducts(page, products_list);
+      await fetchProducts(page, products_list, brand);
       await timer(1000);
       const nextButton = await page.$("a.next");
       if (nextButton) {
@@ -72,7 +70,7 @@ const scrapeBousfiha = async (page, brand, timer, scroll) => {
     }
 
     console.log(products_list.length);
-    return products_list;
+    return products_list.map((product) => ({ brand, ...product }));
   } catch (error) {
     console.error("Error during scraping:", error);
     return [];
