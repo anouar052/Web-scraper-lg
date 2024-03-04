@@ -4,7 +4,7 @@ const fetchProducts = async (page, products_list, brand) => {
   );
 
   const protoProducts = products_scrape.slice(0, 3);
-  for (const product of protoProducts) {
+  for (const product of products_scrape) {
     try {
       const retailer = "bousfiha";
       await page.goto(product);
@@ -33,7 +33,7 @@ const fetchProducts = async (page, products_list, brand) => {
   }
 };
 
-const scrapeBousfiha = async (page, brand, timer) => {
+const scrapeBousfiha = async (page, brand, timer, pagination) => {
   let url;
   switch (brand) {
     case "LG":
@@ -54,22 +54,26 @@ const scrapeBousfiha = async (page, brand, timer) => {
     await page.goto(url);
     await page.waitForSelector(".pagination");
 
-    const pageNumber = (await page.$$(".pagination ul > li")).length - 1;
     const products_list = [];
 
-    for (let i = 0; i < pageNumber; i++) {
+    for (let i = 0; i < pagination; i++) {
       await fetchProducts(page, products_list, brand);
       await timer(1000);
       const nextButton = await page.$("a.next");
       if (nextButton) {
         await nextButton.click();
-        await page.waitForNavigation();
+        try {
+          await page.waitForNavigation();
+        } catch (err) {
+          console.log(err);
+          page.reload();
+        }
       } else {
         break;
       }
     }
 
-    console.log(products_list.length);
+    console.log(products_list.length, "products found");
     return products_list.map((product) => ({ brand, ...product }));
   } catch (error) {
     console.error("Error during scraping:", error);

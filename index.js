@@ -1,9 +1,7 @@
 import puppeteer from "puppeteer";
 import promptSync from "prompt-sync";
-import fs from "fs";
 import XLSX from "xlsx";
 import biougnach from "./sellers/biougnach.js";
-import convert2csv from "./utils/convert2csv.js";
 import electroplanet from "./sellers/electroplanet.js";
 import scrapeBousfiha from "./sellers/bousfiha.js";
 
@@ -12,15 +10,16 @@ const timer = (ms) => new Promise((res) => setTimeout(res, ms));
 
 async function main() {
   //Setup
-  const brand = prompt("what brand?: ").toUpperCase();
+  const brands = prompt("what brand?: ").toUpperCase().split(" ");
   let scroll = +prompt(
     "enter scroll number (1-100 or leave blank to get all items): ",
   );
+  let pagination = parseInt(prompt("BOUSFIHA | max pages?: "));
   if (scroll === 0) {
     scroll = undefined;
   }
 
-  if (!brand) return;
+  if (!brands) return;
 
   const browser = await puppeteer.launch({
     headless: false,
@@ -35,6 +34,30 @@ async function main() {
   });
   page.setDefaultNavigationTimeout(2 * 60 * 1000);
 
+  let final_products_list = [];
+
+  for (let brand of brands) {
+    const brand_products_list = await get_products(
+      page,
+      pagination,
+      brand,
+      timer,
+      scroll,
+    );
+    final_products_list = [...final_products_list, ...brand_products_list];
+  }
+
+  console.log(final_products_list);
+
+  const sheet = XLSX.utils.json_to_sheet(final_products_list);
+  const excel = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(excel, sheet, "Sheet1");
+  XLSX.writeFile(excel, `${brands.join("_")}_products.xlsx`);
+
+  await browser?.close();
+}
+
+const get_products = async (page, pagination, brand, timer, scroll) => {
   const products_list_biougnach = await biougnach(page, brand, timer, scroll);
   const products_list_electroplanet = await electroplanet(
     page,
@@ -47,31 +70,15 @@ async function main() {
     page,
     brand,
     timer,
-    scroll,
+    pagination,
   );
 
-  const products_list = products_list_electroplanet.concat(
-    products_list_biougnach,
-    products_list_bousfiha,
-  );
-  console.log(products_list);
-
-  // const csv = convert2csv(products_list);
-  const sheet = XLSX.utils.json_to_sheet(products_list);
-  const excel = XLSX.utils.book_new();
-  XLSX.utils.book_append_sheet(excel, sheet, "Sheet1");
-  XLSX.writeFile(excel, `${brand}_products.xlsx`);
-  // fs.writeFileSync(
-  //   `./${brand}_products.xlsx`,
-  //   excel,
-  //   (err) => {
-  //     if (err) throw err;
-  //     console.log("file saved!");
-  //   },
-  //   "binary",
-  // );
-
-  await browser?.close();
-}
+  const products_list = [
+    ...products_list_biougnach,
+    ...products_list_electroplanet,
+    ...products_list_bousfiha,
+  ];
+  return products_list;
+};
 
 main();
